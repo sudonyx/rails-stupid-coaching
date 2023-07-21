@@ -1,0 +1,17 @@
+<blockquote class="blockquote">
+  <%= @answer %>
+  <p><small>-You</small></p>
+</blockquote>
+
+<blockquote class="blockquote">
+  <% if @answer == "I am going to work" %>
+    <%= "Great!" %>
+  <% elsif @answer[-1] == "?" %>
+    <%= "Silly question, get dressed and go to work!" %>
+  <% else %>
+    <%= "I don't care, get dressed and go to work!" %>
+  <% end %>
+  <p><small>-Your coach</small></p>
+</blockquote>
+
+<%= link_to "Ask a new question", ask_path, class: "btn btn-primary" %>
